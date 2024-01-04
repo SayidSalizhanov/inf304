@@ -1,22 +1,13 @@
 package ru.itis.inf304.Exam.Triangle;
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         try {
-            IsoscelesTriangle tr1 = new IsoscelesTriangle(2,2,3);
-            IsoscelesTriangle tr2 = new IsoscelesTriangle(4,5,5);
-            IsoscelesTriangle tr3 = new IsoscelesTriangle(5,5,9);
-            IsoscelesTriangle tr4 = new IsoscelesTriangle(1,1,1);
-            IsoscelesTriangle tr5 = new IsoscelesTriangle(1,1,1);
-            System.out.println(tr1.perimetr());
-            System.out.println(tr2.square());
-            System.out.println(tr3.equals(tr4));
-            System.out.println(Arrays.toString(tr4.triangleAngles()));
-            System.out.println(tr5.toString());
-            IsoscelesTriangle[] arr = {tr1, tr2, tr3, tr4, tr5};
-            System.out.println(generalPerimetr(arr));
+            IsoscelesTriangle tr1 = new IsoscelesTriangle(new Point(3,4), new Point(1,1), new Point(5,1));
+            IsoscelesTriangle tr2 = new IsoscelesTriangle(new Point(5,4), new Point(1,1), new Point(9,1));
+            IsoscelesTriangle tr3 = new IsoscelesTriangle(new Point(3,4), new Point(1,1), new Point(5,1));
+            IsoscelesTriangle tr4 = new IsoscelesTriangle(new Point(5,1), new Point(3,4), new Point(1,1));
+            IsoscelesTriangle[] arr = {tr1, tr2, tr3, tr4};
             System.out.println(equality(arr));
         }
         catch (TriangleNotIsoscelesException e) {
