@@ -23,6 +23,20 @@ public class CompletionOfConstruction extends AbstractWorkClass {
 
         // заканчиваем подсчет дней и выводим
         stopCounting();
-        System.out.println(getCountDay());
+    }
+
+    @Override
+    protected long getDuration() {
+        return 0;
+    }
+
+    @Override
+    protected int getDayOfBegin() {
+        return countDay;
+    }
+
+    @Override
+    protected int getDayOfEnd() {
+        return countDay;
     }
 }

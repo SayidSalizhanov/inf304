@@ -4,6 +4,8 @@ import ru.itis.inf304.ConstructionLab12Sem2.AbstractWorkClass;
 
 public class WindowManufacturing extends AbstractWorkClass {
     long duration = 1;
+    int dayOfBegin;
+    int dayOfEnd;
 
     @Override
     public void run() {
@@ -15,12 +17,29 @@ public class WindowManufacturing extends AbstractWorkClass {
             }
         }
         System.out.println("Start Изготовление окон");
+        dayOfBegin = getCountDay();
         try {
             Thread.sleep(1000 * duration);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         System.out.println("End Изготовление окон");
+        dayOfEnd = getCountDay();
         arrayForSynchronization[2] = true;
+    }
+
+    @Override
+    protected long getDuration() {
+        return duration;
+    }
+
+    @Override
+    protected int getDayOfBegin() {
+        return dayOfBegin;
+    }
+
+    @Override
+    protected int getDayOfEnd() {
+        return dayOfEnd;
     }
 }

@@ -32,4 +32,8 @@ public abstract class AbstractWorkClass implements Runnable {
     protected int getCountDay() {
         return countDay;
     }
+
+    abstract protected long getDuration();
+    abstract protected int getDayOfBegin();
+    abstract protected int getDayOfEnd();
 }

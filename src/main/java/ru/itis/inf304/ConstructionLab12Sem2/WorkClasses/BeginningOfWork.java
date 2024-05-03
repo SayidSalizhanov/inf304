@@ -12,4 +12,19 @@ public class BeginningOfWork extends AbstractWorkClass {
         // начинаем подсчет дней
         startCounting();
     }
+
+    @Override
+    protected long getDuration() {
+        return 0;
+    }
+
+    @Override
+    protected int getDayOfBegin() {
+        return countDay;
+    }
+
+    @Override
+    protected int getDayOfEnd() {
+        return countDay;
+    }
 }
