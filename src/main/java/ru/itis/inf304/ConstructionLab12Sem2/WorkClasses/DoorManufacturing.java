@@ -3,6 +3,8 @@ package ru.itis.inf304.ConstructionLab12Sem2.WorkClasses;
 import ru.itis.inf304.ConstructionLab12Sem2.AbstractWorkClass;
 
 public class DoorManufacturing extends AbstractWorkClass {
+    long duration = 7;
+
     @Override
     public void run() {
         while (!arrayForSynchronization[1]) {
@@ -14,7 +16,7 @@ public class DoorManufacturing extends AbstractWorkClass {
         }
         System.out.println("Start Изготовление дверей");
         try {
-            Thread.sleep(1000 * 7);
+            Thread.sleep(1000 * duration);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

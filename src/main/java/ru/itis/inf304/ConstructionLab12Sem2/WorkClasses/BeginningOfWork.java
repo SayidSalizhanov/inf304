@@ -8,5 +8,8 @@ public class BeginningOfWork extends AbstractWorkClass {
         System.out.println("Start Начало работ");
         System.out.println("End Начало работ");
         arrayForSynchronization[0] = true;
+
+        // начинаем подсчет дней
+        startCounting();
     }
 }

@@ -3,6 +3,8 @@ package ru.itis.inf304.ConstructionLab12Sem2.WorkClasses;
 import ru.itis.inf304.ConstructionLab12Sem2.AbstractWorkClass;
 
 public class RoofConstruction extends AbstractWorkClass {
+    long duration = 3;
+
     @Override
     public void run() {
         while (!arrayForSynchronization[6]) {
@@ -14,7 +16,7 @@ public class RoofConstruction extends AbstractWorkClass {
         }
         System.out.println("Start возведение крыши");
         try {
-            Thread.sleep(1000 * 3);
+            Thread.sleep(1000 * duration);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

@@ -20,5 +20,9 @@ public class CompletionOfConstruction extends AbstractWorkClass {
         }
         System.out.println("Start завершение строительства");
         System.out.println("End завершение строительства");
+
+        // заканчиваем подсчет дней и выводим
+        stopCounting();
+        System.out.println(getCountDay());
     }
 }

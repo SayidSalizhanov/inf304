@@ -3,6 +3,8 @@ package ru.itis.inf304.ConstructionLab12Sem2.WorkClasses;
 import ru.itis.inf304.ConstructionLab12Sem2.AbstractWorkClass;
 
 public class WindowInstallation extends AbstractWorkClass {
+    long duration = 1;
+
     @Override
     public void run() {
         while (!arrayForSynchronization[2] || !arrayForSynchronization[7]) {
@@ -14,7 +16,7 @@ public class WindowInstallation extends AbstractWorkClass {
         }
         System.out.println("Start установка окон");
         try {
-            Thread.sleep(1000);
+            Thread.sleep(1000 * duration);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

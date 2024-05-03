@@ -3,6 +3,8 @@ package ru.itis.inf304.ConstructionLab12Sem2.WorkClasses;
 import ru.itis.inf304.ConstructionLab12Sem2.AbstractWorkClass;
 
 public class ConstructionOfTheFoundation extends AbstractWorkClass {
+    long duration = 14;
+
     @Override
     public void run() {
         while (!arrayForSynchronization[1]) {
@@ -14,7 +16,7 @@ public class ConstructionOfTheFoundation extends AbstractWorkClass {
         }
         System.out.println("Start возведение фундамента");
         try {
-            Thread.sleep(1000 * 14);
+            Thread.sleep(1000 * duration);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
