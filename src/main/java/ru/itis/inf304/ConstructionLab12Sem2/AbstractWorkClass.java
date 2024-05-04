@@ -14,12 +14,12 @@ public abstract class AbstractWorkClass implements Runnable {
         isCounting = true;
         Thread countingThread = new Thread(() -> {
             while (isCounting) {
-                countDay++;
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                countDay++;
             }
         });
         countingThread.start();

@@ -9,6 +9,10 @@ public class Project extends AbstractWorkClass {
 
     @Override
     public void run() {
+
+        // начинаем подсчет дней
+        startCounting();
+
         while (!arrayForSynchronization[0]) {
             try {
                 Thread.sleep(1000);
