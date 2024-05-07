@@ -3,7 +3,7 @@ package ru.itis.inf304.ConstructionLab12Sem2.WorkClasses;
 import ru.itis.inf304.ConstructionLab12Sem2.AbstractWorkClass;
 
 public class Project extends AbstractWorkClass {
-    long duration = 7;
+    int duration = 7;
     int dayOfBegin;
     int dayOfEnd;
 
@@ -33,7 +33,7 @@ public class Project extends AbstractWorkClass {
     }
 
     @Override
-    protected long getDuration() {
+    protected int getDuration() {
         return duration;
     }
 

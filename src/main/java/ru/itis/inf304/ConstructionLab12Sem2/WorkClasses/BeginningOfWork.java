@@ -11,7 +11,7 @@ public class BeginningOfWork extends AbstractWorkClass {
     }
 
     @Override
-    protected long getDuration() {
+    protected int getDuration() {
         return 0;
     }
 
