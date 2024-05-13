@@ -278,6 +278,26 @@ public final class FibonacciHeap {
         }
     }
 
+    public void merge(FibonacciHeap h2) {
+        if (minimumNode == null) {
+            minimumNode = h2.minimumNode;
+        } else if (h2.minimumNode != null) {
+            this.minimumNode.getRight().setLeft(h2.minimumNode.getLeft());
+            h2.minimumNode.getLeft().setRight(this.minimumNode.getRight());
+            this.minimumNode.setRight(h2.minimumNode);
+            h2.minimumNode.setLeft(this.minimumNode);
+
+            if (h2.minimumNode.getKey() < minimumNode.getKey()) {
+                minimumNode = h2.minimumNode;
+            }
+        }
+
+        size += h2.size;
+        trees += h2.trees;
+        keys.addAll(h2.keys);
+        markedNodes += h2.markedNodes;
+    }
+
     private int compare( Node o1, Node o2 ) {
         return o1.getKey().compareTo( o2.getKey() );
     }
